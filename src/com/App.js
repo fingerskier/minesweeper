@@ -3,6 +3,7 @@ import errorHandler from '../lib/errorHandler'
 import Footer from './Footer'
 import Header from './Header'
 import Main from './Main'
+import { PhaserProvider } from '../lib/PhaserContext'
 
 import '../style/App.css'
 
@@ -14,10 +15,10 @@ export default function App() {
   
   
   return <>
-    <Header />
-    
-    <Main />
-    
-    <Footer />
+    <PhaserProvider>
+      <Header />
+      <Main />
+      <Footer />
+    </PhaserProvider>
   </>
 }
