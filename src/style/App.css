@@ -1,0 +1,53 @@
+/* Reset styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  /* Root element taking full viewport height */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+header,
+footer {
+  /* Sticky header and footer */
+  position: sticky;
+  z-index: 1;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+header {
+  top: 0; /* Sticks header to the top */
+}
+
+footer {
+  bottom: 0; /* Sticks footer to the bottom */
+}
+
+main {
+  /* Main content fills available space */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  align-items: center;     /* Centers content horizontally */
+  padding: 20px;
+  overflow: hidden;        /* Prevents scrolling */
+}
+
+
+#phaser-container {
+  /* Center the Phaser game container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%; /* Makes the container take full space of <main> */
+}
